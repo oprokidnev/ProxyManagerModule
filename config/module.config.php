@@ -3,8 +3,8 @@
 return array(
     'proxy_manager_module' => array(
         'configuration' => array(
-            //settet in underscore => value
-            //'proxies_target_dir' => './data/ProxyManager',
+        //settet in underscore => value
+        //'proxies_target_dir' => './data/ProxyManager',
         ),
     ),
     'service_manager'      => array(
@@ -13,8 +13,8 @@ return array(
             'ProxyManagerModule\Factory\LazyLoadingGhostFactory' => 'ProxyManagerModule\Factory\LazyLoadingGhostFactory',
         ),
         'aliases'   => array(
-            'ProxyManagerModule\Factory\LazyLoadingGhostFactory' => 'LazyLoadingGhostFactory',
-            'ProxyManagerModule\Factory\Config'                  => 'ProxyManagerConfig',
+            'LazyLoadingGhostFactory' => 'ProxyManagerModule\Factory\LazyLoadingGhostFactory',
+            'ProxyManagerConfig'      => 'ProxyManagerModule\Factory\Config',
         ),
     ),
 );

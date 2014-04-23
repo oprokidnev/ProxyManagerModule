@@ -6,7 +6,7 @@ class Module implements \Zend\ModuleManager\Feature\AutoloaderProviderInterface,
 {
 
     /**
-     * 
+     *
      * @return array
      */
     public function getConfig()
@@ -15,7 +15,7 @@ class Module implements \Zend\ModuleManager\Feature\AutoloaderProviderInterface,
     }
 
     /**
-     * 
+     *
      * @return array
      */
     public function getAutoloaderConfig()
@@ -28,6 +28,5 @@ class Module implements \Zend\ModuleManager\Feature\AutoloaderProviderInterface,
             ),
         );
     }
-
 
 }
