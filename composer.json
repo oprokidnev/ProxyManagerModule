@@ -1,0 +1,27 @@
+{
+    "name": "oprokidnev/proxy-manager-module",
+    "description": "",
+    "type": "library",
+    "keywords": [
+        "proxy manager module",
+        "proxy manager zend framework 2",
+        "proxy manager zf2"
+    ],
+    "homepage": "https://github.com/oprokidnev/ProxyManagerModule",
+    "authors": [
+        {
+            "name": "Andrey Oprokidnev",
+            "email": "aa@oprokidnev.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "zendframework/zendframework": "2.*",
+        "ocramius/proxy-manager": ">=0.5"
+    },
+    "autoload": {
+        "psr-0": {
+            "ProxyManagerModule": "src/"
+        }
+    }
+}
