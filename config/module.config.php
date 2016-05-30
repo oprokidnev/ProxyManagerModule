@@ -9,12 +9,14 @@ return array(
     ),
     'service_manager'      => array(
         'factories' => array(
-            'ProxyManagerModule\Factory\Config'                  => 'ProxyManagerModule\Factory\Config',
-            'ProxyManagerModule\Factory\LazyLoadingGhostFactory' => 'ProxyManagerModule\Factory\LazyLoadingGhostFactory',
+            'ProxyManagerModule\Factory\Config'                        => 'ProxyManagerModule\Factory\Config',
+            'ProxyManagerModule\Factory\LazyLoadingGhostFactory'       => 'ProxyManagerModule\Factory\LazyLoadingGhostFactory',
+            'ProxyManagerModule\Factory\LazyLoadingValueHolderFactory' => 'ProxyManagerModule\Factory\LazyLoadingValueHolderFactory',
         ),
         'aliases'   => array(
-            'LazyLoadingGhostFactory' => 'ProxyManagerModule\Factory\LazyLoadingGhostFactory',
-            'ProxyManagerConfig'      => 'ProxyManagerModule\Factory\Config',
+            'LazyLoadingGhostFactory'       => 'ProxyManagerModule\Factory\LazyLoadingGhostFactory',
+            'LazyLoadingValueHolderFactory' => 'ProxyManagerModule\Factory\LazyLoadingValueHolderFactory',
+            'ProxyManagerConfig'            => 'ProxyManagerModule\Factory\Config',
         ),
     ),
 );

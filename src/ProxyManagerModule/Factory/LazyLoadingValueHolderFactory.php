@@ -17,8 +17,6 @@ class LazyLoadingValueHolderFactory implements \Zend\ServiceManager\FactoryInter
      */
     public function createService(\Zend\ServiceManager\ServiceLocatorInterface $serviceLocator)
     {
-        $sl = $serviceLocator;
-
         $proxyManagerConfig = $serviceLocator->get('ProxyManagerConfig');
 
         return new \ProxyManager\Factory\LazyLoadingValueHolderFactory($proxyManagerConfig);
