@@ -26,7 +26,7 @@ class Config implements \Zend\ServiceManager\FactoryInterface
             $proxyManagerModuleConfig = $config['proxy_manager_module']['configuration'];
             foreach ($proxyManagerModuleConfig as $key => $value) {
                 $setter = 'set' . ucfirst($underscoreToCamelCaseFilter->filter($key));
-                if (method_exists($proxyManagerConfig, $setter)) {
+                if (method_exists($proxyManagerConfig, $setter) && $value !== null) {
                     $proxyManagerConfig->$setter($value);
                 }
                 if($setter == 'setProxiesTargetDir'){
@@ -36,6 +36,19 @@ class Config implements \Zend\ServiceManager\FactoryInterface
         }
 
         return $proxyManagerConfig;
+    }
+
+    /**
+     * SMv3 factory
+     * @param \Interop\Container\ContainerInterface $container
+     * @param mixed $requestedName
+     * @param mixed $options
+     * @return \ProxyManager\Factory\LazyLoadingValueHolderFactory Description
+     */
+    public function __invoke(\Interop\Container\ContainerInterface $container,
+                             $requestedName, array $options = null)
+    {
+        return $this->createService($container);
     }
 
 }

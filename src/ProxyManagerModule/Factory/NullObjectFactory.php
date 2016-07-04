@@ -24,4 +24,18 @@ class NullObjectFactory implements \Zend\ServiceManager\FactoryInterface
         return new \ProxyManager\Factory\NullObjectFactory($proxyManagerConfig);
     }
 
+
+    /**
+     * SMv3 factory
+     * @param \Interop\Container\ContainerInterface $container
+     * @param mixed $requestedName
+     * @param mixed $options
+     * @return \ProxyManager\Factory\LazyLoadingValueHolderFactory Description
+     */
+    public function __invoke(\Interop\Container\ContainerInterface $container,
+                             $requestedName, array $options = null)
+    {
+        return $this->createService($container);
+    }
+
 }
