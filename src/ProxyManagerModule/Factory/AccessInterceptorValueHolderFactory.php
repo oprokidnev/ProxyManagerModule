@@ -24,4 +24,20 @@ class AccessInterceptorValueHolderFactory implements \Zend\ServiceManager\Factor
         return new \ProxyManager\Factory\AccessInterceptorValueHolderFactory($proxyManagerConfig);
     }
 
+
+
+    /**
+     * SMv3 factory
+     * @param \Interop\Container\ContainerInterface $container
+     * @param mixed $requestedName
+     * @param mixed $options
+     * @return \ProxyManager\Factory\AccessInterceptorValueHolderFactory Description
+     */
+    public function __invoke(\Interop\Container\ContainerInterface $container,
+                             $requestedName, array $options = null)
+    {
+        return $this->createService($container);
+    }
+
+
 }

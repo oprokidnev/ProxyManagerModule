@@ -30,7 +30,7 @@ class NullObjectFactory implements \Zend\ServiceManager\FactoryInterface
      * @param \Interop\Container\ContainerInterface $container
      * @param mixed $requestedName
      * @param mixed $options
-     * @return \ProxyManager\Factory\LazyLoadingValueHolderFactory Description
+     * @return \ProxyManager\Factory\NullObjectFactory Description
      */
     public function __invoke(\Interop\Container\ContainerInterface $container,
                              $requestedName, array $options = null)
